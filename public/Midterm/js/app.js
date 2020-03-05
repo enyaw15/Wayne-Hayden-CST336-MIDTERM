@@ -12,12 +12,12 @@ $("#submit").on("click", function(){
             $(".cover").html(`<img width=100% src ="${data.cover.large}"/>`)
             let info = $(".info");
             info.html("");
-            info.append(`<p>${data.title}</p>`);
-            info.append(`<p>${data.authors[0].name}</p>`);
-            info.append(`<p>${data.publish_date}</p>`);
-            info.append(`<p>${data.publishers[0].name}</p>`);
-            info.append(`<p>${ISBN}</p>`);
-            info.append(`<p>${data.number_of_pages}</p>`);
+            info.append(`<p>Title: ${data.title}</p>`);
+            info.append(`<p>Author: ${data.authors[0].name}</p>`);
+            info.append(`<p>Publish: ${data.publish_date}</p>`);
+            info.append(`<p>Publisher: ${data.publishers[0].name}</p>`);
+            info.append(`<p>ISBN: ${ISBN}</p>`);
+            info.append(`<p>Pages: ${data.number_of_pages}</p>`);
             
         },
         err:function(err){
