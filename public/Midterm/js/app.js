@@ -9,7 +9,7 @@ $("#submit").on("click", function(){
         success: function(result,status){
             console.log(result);
             let data = result[`ISBN:${ISBN}`];
-            $(".cover").html(`<img width=100% src ="${data.cover.large}"/>`)
+            $("#cover").html(`<img class = "cover" width=100% src ="${data.cover.large}"/>`)
             let info = $(".info");
             info.html("");
             info.append(`<p>Title: ${data.title}</p>`);
